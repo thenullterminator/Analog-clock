@@ -1,0 +1,37 @@
+<html>
+
+<head>
+    <title>Analog Clock</title>
+    <style type="text/css">
+
+    #wkspace
+    {
+        border: 2px solid black;
+        border-radius:22px;
+    }
+    
+    </style>
+</head>
+
+<body>
+
+    <canvas width="800" height="800" id="wkspace"></canvas>
+
+
+    <script type="text/javascript">
+    var main=document.getElementById("wkspace");
+    var context=main.getContext("2d");
+
+
+    var grd=context.createRadialGradient(400,400,20,400,400,380);
+    grd.addColorStop(0,"rgb(181, 166, 166)");
+    grd.addColorStop(1,"black");
+    
+    // context.fillStyle="red";
+    context.fillStyle=grd;
+    
+    context.arc(400,400,380,0,2*Math.PI);
+    context.fill()
+    </script>
+</body>
+</html>
