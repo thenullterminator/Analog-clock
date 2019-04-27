@@ -50,21 +50,60 @@
     context.closePath();
     // Clock Digits..............
 
-
+    // Center Circle..............
     context.beginPath();
     context.fillStyle="white";
-    context.arc(400,400,20,0,2*Math.PI);
+    context.arc(405,400,20,0,2*Math.PI);
     context.fill();
     context.closePath();
+    // Center Circle..............
 
+    // Some Random center Text ............
+    context.beginPath();
+    context.fillStyle="white";
+    context.font="40px Great Vibes";
+    context.fillText("DJ  n  Company",280,240);   
+    context.closePath();
+    // Some Random center Text ............
+
+
+    // Drawing second Hand of clock.....
     context.beginPath();
     context.strokeStyle="white";
-    context.lineWidth=2;
 
-    context.moveTo(400,400);
-    context.lineTo(400,80);
+    context.lineWidth=2;
+    context.moveTo(405,405); // for second hand center (405,405) and radius is 325
+    context.lineTo(405,70);
     context.stroke();
+
     context.closePath();
+    // Drawing second Hand of clock.....
+
+
+    // Drawing minute Hand of clock.....
+    context.beginPath();
+    context.strokeStyle="white";
+
+    context.lineWidth=5;
+    context.moveTo(405,405); // for minute hand center (405,405) and radius is 270
+    context.lineTo(405,675);
+    context.stroke();
+
+    context.closePath();
+    // Drawing minute Hand of clock.....
+
+
+    // Drawing hour Hand of clock.....
+    context.beginPath();
+    context.strokeStyle="white";
+
+    context.lineWidth=5;
+    context.moveTo(405,405); // for minute hand center (405,405) and radius is 270
+    context.lineTo(405,675);
+    context.stroke();
+
+    context.closePath();
+    // Drawing hour Hand of clock.....
 
 
 
