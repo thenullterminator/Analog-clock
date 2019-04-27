@@ -1,0 +1,19 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+            <a onclick="timeNow(test1)" href="#">SET TIME</a>
+            <input id="test1" type="time" value="10:40" />
+        <script>
+        function timeNow(i) 
+        {
+            var d = new Date(),
+            h =  d.getHours(),
+            m =  d.getMinutes();
+            s =  d.getSeconds();
+            i.value = h + ':' + m+":"+s;
+        }
+        </script>
+    </body>
+</html>
