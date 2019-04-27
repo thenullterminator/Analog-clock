@@ -22,16 +22,32 @@
     var main=document.getElementById("wkspace");
     var context=main.getContext("2d");
 
-
-    var grd=context.createRadialGradient(400,400,20,400,400,380);
-    grd.addColorStop(0,"rgb(181, 166, 166)");
+    // Gradient for base............
+    context.beginPath();
+    var grd=context.createRadialGradient(400,400,40,400,400,360);
+    grd.addColorStop(0,"white");
     grd.addColorStop(1,"black");
-    
-    // context.fillStyle="red";
+
     context.fillStyle=grd;
     
     context.arc(400,400,380,0,2*Math.PI);
     context.fill()
+    context.closePath();
+    // Base completed ............
+
+    // Clock Digits..............
+    context.beginPath();
+    context.fillStyle="white";
+    context.font="30px Arial";
+    var theta=-60,del=30;
+    for(var i=1;i<=12;i++)
+    {
+        context.fillText(i,388+348.0*Math.cos(theta*Math.PI/180),406+351.0*Math.sin(theta*Math.PI/180));
+        theta+=del;
+    }   
+    context.closePath();
+    // Clock Digits..............
+
     </script>
 </body>
 </html>
