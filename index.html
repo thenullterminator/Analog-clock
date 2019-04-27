@@ -2,6 +2,7 @@
 
 <head>
     <title>Analog Clock</title>
+    <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Dancing+Script|Great+Vibes|Gugi|Kaushan+Script|Pacifico" rel="stylesheet">
     <style type="text/css">
 
     #wkspace
@@ -24,8 +25,8 @@
 
     // Gradient for base............
     context.beginPath();
-    var grd=context.createRadialGradient(400,400,40,400,400,360);
-    grd.addColorStop(0,"white");
+    var grd=context.createRadialGradient(400,400,10,400,400,360);
+    grd.addColorStop(0,"gray");
     grd.addColorStop(1,"black");
 
     context.fillStyle=grd;
@@ -35,10 +36,11 @@
     context.closePath();
     // Base completed ............
 
+
     // Clock Digits..............
     context.beginPath();
     context.fillStyle="white";
-    context.font="30px Arial";
+    context.font="30px Gugi";
     var theta=-60,del=30;
     for(var i=1;i<=12;i++)
     {
@@ -47,6 +49,24 @@
     }   
     context.closePath();
     // Clock Digits..............
+
+
+    context.beginPath();
+    context.fillStyle="white";
+    context.arc(400,400,20,0,2*Math.PI);
+    context.fill();
+    context.closePath();
+
+    context.beginPath();
+    context.strokeStyle="white";
+    context.lineWidth=2;
+
+    context.moveTo(400,400);
+    context.lineTo(400,80);
+    context.stroke();
+    context.closePath();
+
+
 
     </script>
 </body>
